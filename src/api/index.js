@@ -6,6 +6,7 @@ import {
   API_SIGNUP,
   API_RESTAURANT_DETAIL,
   API_GET_ALLSTATES,
+  API_GET_PAYMENTOPTIONS,
 } from './constants';
 
 export const getRestaurantById = async (id) => {
@@ -14,6 +15,16 @@ export const getRestaurantById = async (id) => {
     let result = await axios.get(api);
     return result;
   } catch (e) {
+    return e;
+  }
+};
+
+export const getPaymentMethods = async () => {
+  try{
+    let api=`${API_GET_PAYMENTOPTIONS}`;
+    let result= await axios.get(api);
+    return result;
+  }catch(e){
     return e;
   }
 };

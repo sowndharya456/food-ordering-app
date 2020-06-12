@@ -12,3 +12,5 @@ export const API_RESTAURANT_DETAIL =
   process.env.REACT_APP_API + '/api/restaurant';
 
 export const API_GET_ALLSTATES = process.env.REACT_APP_API + '/api/states';
+
+export const API_GET_PAYMENTOPTIONS = process.env.REACT_APP_API + '/api/payment';
